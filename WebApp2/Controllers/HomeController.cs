@@ -8,8 +8,12 @@ namespace WebApp2.Controllers
 {
     public class HomeController : Controller
     {
-        public ActionResult Index()
+        public ActionResult Index(string id)
         {
+            if (id == "bug")
+            {
+                throw new Exception("you asked for it");
+            }
             return View();
         }
 
